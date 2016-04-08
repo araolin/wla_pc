@@ -684,6 +684,11 @@ fieldset .radio_inner {
     height: 240px;
     border: 4px dotted #8D8D8D;
 }
+.images_update{
+    width: 320px;
+    height: 180px;
+    margin: 0;
+}
 /*END 生产单录入*/
 
 /*tabs*/
@@ -706,3 +711,30 @@ fieldset .radio_inner {
     color: #78cc40;
 }
 /*END tabs*/
+
+.images_update{
+    cursor: pointer;
+    width: 320px;
+    height: 180px;
+    margin-right: 12px;
+}
+.images_update{
+    color: #8D8D8D;
+    border: 4px dotted #8D8D8D;
+    text-align: center;
+    font-size: 68px;
+    font-weight: bold;
+}
+.images_update i{
+    height: 120px;
+    line-height: 120px;
+}
+.images_update p{
+    font-size: 18px;
+    height: 60px;
+}
+.image_show img{
+    width: 320px;
+    height: 180px;
+    border: 4px dotted #8D8D8D;
+}
