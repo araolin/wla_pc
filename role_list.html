@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>流动资金管理系统</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <meta name="keywords" content=" " />
+    <meta name="description" content=" " />
+    <meta name="author" content="www.kwanson.com">
+    <meta name="version" content="v.1.0.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--侧栏-->
+<div class="aside">
+    <div class="aside_wrapper">
+        <!-- Logo (200px wide) -->
+        <a href="#"><img class="logo" src="images/logo.png" alt="流动资金管理系统LOGO" /></a>
+
+        <ul class="main_nav">  <!-- main Menu -->
+            <li class="coin_1">
+                <a href="index.html" class="nav_top_item">
+                    <em class="icon">&#xe633;</em>首页
+                </a>
+            </li>
+
+            <li class="coin_2">
+                <a href="profile.html" class="nav_top_item" >
+                    <em class="icon">&#xe604;</em>账号管理
+                </a>
+                <ul class="sub_menu hide" id="ud2">
+                    <li><a href="profile.html">个人信息</a></li>
+                    <li><a href="change_pwd.html">修改密码</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_3">
+                <a href="admin_list.html" class="nav_top_item">
+                    <em class="icon">&#xe601;</em>权限管理
+                </a>
+                <ul class="sub_menu hide" id="ud3">
+                    <li><a href="admin_list.html">管理员列表</a></li>
+                    <li><a href="add_admin.html">新增管理员</a></li>
+                    <li><a href="role_list.html">管理员角色列表</a></li>
+                    <li><a href="add_role.html">新增管理员角色</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_4">
+                <a href="remitter_list.html" class="nav_top_item">
+                    <em class="icon">&#xe607;</em>汇款人管理
+                </a>
+                <ul class="sub_menu hide" id="ud4">
+                    <li><a href="remitter_list.html">汇款人列表</a></li>
+                    <li><a href="add_remitter.html">新增汇款人</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_5">
+                <a href="remit_list.html" class="nav_top_item">
+                    <em class="icon">&#xe64b;</em>汇款管理
+                </a>
+                <ul class="sub_menu hide" id="ud5">
+                    <li><a href="remit_list.html">汇款列表</a></li>
+                    <li><a href="add_remit.html">新增汇款</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_6">
+                <a href="return_list.html" class="nav_top_item">
+                    <em class="icon">&#xe649;</em>回款管理
+                </a>
+                <ul class="sub_menu hide" id="ud6">
+                    <li><a href="return_list.html">回款列表</a></li>
+                    <li><a href="add_return.html">新增回款</a></li>
+                    <li><a href="timeout.html">超时记录</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_7">
+                <a href="borrow_list.html" class="nav_top_item">
+                    <em class="icon">&#xe608;</em>月报表
+                </a>
+                <ul class="sub_menu hide" id="ud7">
+                    <li><a href="borrow_list.html">总借入金额</a></li>
+                    <li><a href="interest_list.html">应支付利息</a></li>
+                </ul>
+            </li>
+
+        </ul> <!-- End #main-nav -->
+    </div>
+</div>
+<!--END 侧栏-->
+<!-- main -->
+<div class="main">
+    <!--顶部top_bar-->
+    <div class="top_bar">
+        <div class="top_bar_inner fr">
+            <div class="logout">
+                <a href="javascript:;" title="退出">
+                    <i class="icon">&#xe60c;</i>
+                    退出
+                </a>
+            </div>
+            <div class="welcome">
+                <span class="fr">业务部 隔壁老王</span>
+                <img class="fr" src="images/avatar.jpg" alt="隔壁老王" />
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--END 顶部top_bar-->
+
+    <!--content-->
+    <div class="content">
+        <!--管理员角色列表-->
+        <div class="role_list">
+            <div class="box">
+                <div class="box_t box_t_bottom">
+                    <h3 class="fl">权限管理 - 管理员角色列表</h3>
+                    <div class="search_box fr">
+                        <input class="fl" type="text" placeholder="请输入关键词"/>
+                        <button class="fl" type="submit"><i class="icon">&#xe617;</i></button>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="box_c box_c_reset">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>角色</th>
+                            <th class="text-right">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>超级管理员</td>
+                            <td class="text-right"><a href="add_role.html">编辑</a> | <a href="#">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>会计</td>
+                            <td class="text-right"><a href="add_role.html">编辑</a> | <a href="#">删除</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="clear"></div>
+                    <div class="fr">
+                        <div class="pages">
+                            <span>共有1条，每页显示：10条</span><b>1</b><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a>...<a href="">168</a>到第<input class="text_input w40" type="text" value="1">页<a href="">确定</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--END 管理员角色列表-->
+    </div>
+    <!--END content-->
+</div>
+<!-- END main -->
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript">
+    $(function () {
+        menu1("#ud3", "#ud3 a", ".coin_3 a.nav_top_item");
+    })
+</script>
+
+</body>
+</html>
