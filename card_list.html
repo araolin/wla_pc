@@ -119,10 +119,10 @@
     <!--content-->
     <div class="content">
         <!--汇款人列表-->
-        <div class="remitter_list">
+        <div class="card_list">
             <div class="box">
                 <div class="box_t box_t_bottom">
-                    <h3 class="fl">汇款人管理 - 汇款人列表</h3>
+                    <h3 class="fl">汇款人管理 - 卡号列表</h3>
                     <div class="search_box fr">
                         <input class="fl" type="text" placeholder="请输入关键词"/>
                         <button class="fl" type="submit"><i class="icon">&#xe617;</i></button>
@@ -136,11 +136,7 @@
                         <tr>
                             <th>账号</th>
                             <th>姓名</th>
-                            <th>手机</th>
-                            <th>存储卡</th>
-                            <th>开户行</th>
-                            <th>支付宝</th>
-                            <th>微信</th>
+                            <th>卡号</th>
                             <th class="text-right">操作</th>
                         </tr>
                         </thead>
@@ -148,22 +144,26 @@
                         <tr>
                             <td>WLA001</td>
                             <td>王先森</td>
-                            <td>13662364285</td>
-                            <td>尾号0980</td>
-                            <td>建设银行天河支行</td>
-                            <td>13662364285</td>
-                            <td>wrh99930</td>
-                            <td class="text-right"><a class="add_interest_button" href="javascript:;">计息</a> | <a class="add_interest_button" href="javascript:;">罚息</a> | <a href="remitter_detail.html">详情</a> | <a href="add_remitter.html">编辑</a> | <a href="#">删除</a></td>
+                            <td><i class="icon icon1">&#xe64f;</i>尾号0980</td>
+                            <td class="text-right"><a href="card1_detail.html">详情</a> | <a href="edit_card1.html">编辑</a> | <a href="#">删除</a></td>
                         </tr>
                         <tr>
                             <td>WLA002</td>
                             <td>王尼玛</td>
-                            <td>13360803349</td>
-                            <td>尾号0445</td>
-                            <td>招商银行罗岗支行</td>
-                            <td>13360803349</td>
-                            <td>wrh199102</td>
-                            <td class="text-right"><a class="add_interest_button" href="javascript:;">计息</a> | <a class="add_interest_button" href="javascript:;">罚息</a> | <a href="remitter_detail.html">详情</a> | <a href="add_remitter.html">编辑</a> | <a href="#">删除</a></td>
+                            <td><i class="icon icon2">&#xe64e;</i>尾号8888</td>
+                            <td class="text-right"><a href="card2_detail.html">详情</a> | <a href="edit_card2.html">编辑</a> | <a href="#">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>WLA003</td>
+                            <td>老王</td>
+                            <td><i class="icon icon3">&#xe650;</i>wrh9999@qq.com</td>
+                            <td class="text-right"><a href="card3_detail.html">详情</a> | <a href="edit_card3.html">编辑</a> | <a href="#">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td>WLA004</td>
+                            <td>小王</td>
+                            <td><i class="icon icon4">&#xe64d;</i>13662364285</td>
+                            <td class="text-right"><a href="card4_detail.html">详情</a> | <a href="edit_card4.html">编辑</a> | <a href="#">删除</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -178,48 +178,6 @@
             </div>
         </div>
         <!--END 汇款人列表-->
-        <!-- 计息表单弹窗 -->
-        <div id="add_interest_form" class="hide">
-            <div class="box">
-                <div class="box_t">
-                    <h3>添加计息</h3>
-                </div>
-                <div class="box_c">
-                    <fieldset>
-                        <div class="box_c_item">
-                            <label class="l_title">汇款金额：</label>
-                            <span class="l_con w300">￥ 88888.00</span>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="box_c_item">
-                            <label class="l_title">添加计息：</label>
-                            <input class="text_input w80" type="text" placeholder="0.00" value="">&nbsp;&nbsp;%
-                            <div class="clear"></div>
-                        </div>
-                        <div class="box_c_item">
-                            <label class="l_title"></label>
-                            <button class="btn btn_commit" type="button">提交</button> &nbsp;<a href="javascript:;" class="btn btn_cancel">取消</a>
-                            <div class="clear"></div>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="layer/layer.js"></script>
-        <script type="text/javascript">
-            $(".add_interest_button").bind("click",function(){
-                layer.open({
-                    type: 1,
-                    skin: 'layui-layer-rim', //加上边框
-                    area: ['480px', '300px'], //宽高
-                    title: false,
-                    closeBtn: 1,
-                    shadeClose: true,
-                    content: $("#add_interest_form")
-                });
-            });
-        </script>
-        <!--END 计息表单弹窗-->
     </div>
     <!--END content-->
 </div>

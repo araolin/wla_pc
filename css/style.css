@@ -733,8 +733,28 @@ fieldset .radio_inner {
     font-size: 18px;
     height: 60px;
 }
+.image_show{
+    margin-right: 12px;
+}
 .image_show img{
     width: 320px;
     height: 180px;
     border: 4px dotted #8D8D8D;
+}
+
+.card_list .table .icon{
+    font-size: 16px;
+    padding-right:5px;
+}
+.card_list .table .icon1{
+    color: #0b7b59;
+}
+.card_list .table .icon2{
+    color: #f8ca05;
+}
+.card_list .table .icon3{
+    color: #00a1e9;
+}
+.card_list .table .icon4{
+    color: #75d140;
 }
