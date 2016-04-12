@@ -52,6 +52,9 @@ button, input, select, textarea {
 .w150 {
     width: 150px !important;
 }
+.w100 {
+    width: 100px !important;
+}
 .w80{
     width: 80px !important;
 }
@@ -742,19 +745,19 @@ fieldset .radio_inner {
     border: 4px dotted #8D8D8D;
 }
 
-.card_list .table .icon{
+.card_list .table .icon,.card_icon{
     font-size: 16px;
     padding-right:5px;
 }
-.card_list .table .icon1{
+.card_list .table .icon1,.card_icon1{
     color: #0b7b59;
 }
-.card_list .table .icon2{
+.card_list .table .icon2,.card_icon2{
     color: #f8ca05;
 }
-.card_list .table .icon3{
+.card_list .table .icon3,.card_icon3{
     color: #00a1e9;
 }
-.card_list .table .icon4{
+.card_list .table .icon4,.card_icon4{
     color: #75d140;
 }

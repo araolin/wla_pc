@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>流动资金管理系统</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <meta name="keywords" content=" " />
+    <meta name="description" content=" " />
+    <meta name="author" content="www.kwanson.com">
+    <meta name="version" content="v.1.0.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--侧栏-->
+<div class="aside">
+    <div class="aside_wrapper">
+        <!-- Logo (200px wide) -->
+        <a href="#"><img class="logo" src="images/logo.png" alt="流动资金管理系统LOGO" /></a>
+
+        <ul class="main_nav">  <!-- main Menu -->
+            <li class="coin_1">
+                <a href="index.html" class="nav_top_item">
+                    <em class="icon">&#xe633;</em>首页
+                </a>
+            </li>
+
+            <li class="coin_2">
+                <a href="profile.html" class="nav_top_item" >
+                    <em class="icon">&#xe604;</em>账号管理
+                </a>
+                <ul class="sub_menu hide" id="ud2">
+                    <li><a href="profile.html">个人信息</a></li>
+                    <li><a href="change_pwd.html">修改密码</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_3">
+                <a href="admin_list.html" class="nav_top_item">
+                    <em class="icon">&#xe601;</em>权限管理
+                </a>
+                <ul class="sub_menu hide" id="ud3">
+                    <li><a href="admin_list.html">管理员列表</a></li>
+                    <li><a href="add_admin.html">新增管理员</a></li>
+                    <li><a href="role_list.html">管理员角色列表</a></li>
+                    <li><a href="add_role.html">新增管理员角色</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_4">
+                <a href="remitter_list.html" class="nav_top_item">
+                    <em class="icon">&#xe607;</em>汇款人管理
+                </a>
+                <ul class="sub_menu hide" id="ud4">
+                    <li><a href="remitter_list.html">汇款人列表</a></li>
+                    <li><a href="add_remitter.html">新增汇款人</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_5">
+                <a href="remit_list.html" class="nav_top_item">
+                    <em class="icon">&#xe64b;</em>汇款管理
+                </a>
+                <ul class="sub_menu hide" id="ud5">
+                    <li><a href="remit_list.html">汇款列表</a></li>
+                    <li><a href="add_remit.html">新增汇款</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_6">
+                <a href="return_list.html" class="nav_top_item">
+                    <em class="icon">&#xe649;</em>回款管理
+                </a>
+                <ul class="sub_menu hide" id="ud6">
+                    <li><a href="return_list.html">回款列表</a></li>
+                    <li><a href="add_return.html">新增回款</a></li>
+                    <li><a href="timeout.html">超时记录</a></li>
+                </ul>
+            </li>
+
+            <li class="coin_7">
+                <a href="borrow_list.html" class="nav_top_item">
+                    <em class="icon">&#xe608;</em>月报表
+                </a>
+                <ul class="sub_menu hide" id="ud7">
+                    <li><a href="borrow_list.html">总借入金额</a></li>
+                    <li><a href="interest_list.html">应支付利息</a></li>
+                </ul>
+            </li>
+
+        </ul> <!-- End #main-nav -->
+    </div>
+</div>
+<!--END 侧栏-->
+<!-- main -->
+<div class="main">
+    <!--顶部top_bar-->
+    <div class="top_bar">
+        <div class="top_bar_inner fr">
+            <div class="logout">
+                <a href="javascript:;" title="退出">
+                    <i class="icon">&#xe60c;</i>
+                    退出
+                </a>
+            </div>
+            <div class="welcome">
+                <span class="fr">业务部 隔壁老王</span>
+                <img class="fr" src="images/avatar.jpg" alt="隔壁老王" />
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--END 顶部top_bar-->
+
+    <!--content-->
+    <div class="content">
+        <!--添加回款-->
+        <div class="add_return">
+            <div class="box">
+                <div class="box_t">
+                    <h3>回款管理 - 新增回款</h3>
+                </div>
+                <div class="box_c">
+                    <form action="add_return.html" method="post">
+                        <fieldset>
+                            <div class="box_c_item">
+                                <label class="l_title">收款人：</label>
+                                <input class="text_input w300" type="text" placeholder="请输入收款人姓名" value="">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item">
+                                <label class="l_title">手机号码：</label>
+                                <input class="text_input w300" type="text" placeholder="请输入手机号码" value="">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item">
+                                <label class="l_title">汇款方式：</label>
+                                <span class="radio_inner w100 fl">
+                                    <input class="ace" type="radio" name="remit_style" value="cck_style" checked><i class="icon card_icon card_icon1">&#xe64f;</i>存储卡
+                                </span>
+                                <span class="radio_inner w100 fl">
+                                    <input class="ace" type="radio" name="remit_style" value="zfb_style"><i class="icon card_icon card_icon3">&#xe650;</i>支付宝
+                                </span>
+                                <span class="radio_inner w100 fl">
+                                    <input class="ace" type="radio" name="remit_style" value="wx_style"><i class="icon card_icon card_icon4">&#xe64d;</i>微信
+                                </span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item cck_info remit_info">
+                                <label class="l_title">&nbsp;</label>
+                                <span class="l_con w300">招商银行罗岗分行&nbsp;&nbsp;尾号9999</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item zfb_info remit_info hide">
+                                <label class="l_title">&nbsp;</label>
+                                <span class="l_con w300">13662364285</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item wx_info remit_info hide">
+                                <label class="l_title">&nbsp;</label>
+                                <span class="l_con w300">wrh8888@qq.com</span>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- 支付方式选择 -->
+                            <script type="text/javascript">
+                                $(function(){
+                                    $('input[name="remit_style"]').change(function(){
+                                        var rs = $(this).val();
+                                        $(".remit_info").hide();
+                                        if(rs=="cck_style"){
+                                            $(".cck_info").show();
+                                        }else if(rs=="zfb_style"){
+                                            $(".zfb_info").show();
+                                        }else{
+                                            $(".wx_info").show();
+                                        }
+                                    })
+                                })
+                            </script>
+                            <!-- 支付方式选择 -->
+                            <div class="box_c_item">
+                                <label class="l_title">回款金额：</label>
+                                <input class="text_input w300" type="text" placeholder="请输入回款金额" value="">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item">
+                                <label class="l_title">回款日期：</label>
+                                <input class="text_input w300" type="text" placeholder="请选择回款日期" onClick="laydate({istime: false, format: 'YYYY-MM-DD',issure: false})">
+                                <div class="clear"></div>
+                                <!-- 日历控件 -->
+                                <script type="text/javascript" src="laydate/laydate.js"></script>
+                                <script>
+                                    !function(){
+                                        laydate.skin('yalan');//切换皮肤，请查看skins下面皮肤库
+                                    }();
+                                </script>
+                                <!-- END 日历控件 -->
+                            </div>
+                            <div class="box_c_item">
+                                <label class="l_title">回款凭证：</label>
+                                <div class="image_show">
+                                    <img src="images/card_example.jpg" alt="回款凭证">
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box_c_item">
+                                <label class="l_title"></label>
+                                <button class="btn btn_commit" type="submit">保存修改</button> &nbsp;<a href="javascript:;" class="btn btn_cancel">取消</a>
+                                <div class="clear"></div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--END 添加回款-->
+    </div>
+    <!--END content-->
+</div>
+<!-- END main -->
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript">
+    $(function () {
+        menu1("#ud6", "#ud6 a", ".coin_6 a.nav_top_item");
+    })
+</script>
+
+</body>
+</html>
