@@ -135,6 +135,7 @@
                         <tr>
                             <th>汇款日期</th>
                             <th>汇款人</th>
+                            <th>汇款方式</th>
                             <th>汇款金额</th>
                             <th>回款日期</th>
                             <th>总利息</th>
@@ -146,20 +147,22 @@
                         <tr>
                             <td>2016/03/30</td>
                             <td>王先森</td>
-                            <td>8888888</td>
+                            <td>支付宝</td>
+                            <td>8,888,888</td>
                             <td>2016/05/01</td>
                             <td>88</td>
                             <td>待审核</td>
-                            <td class="text-right"><a href="#">详情</a> | <a href="#">审核</a> | <a href="#">回款</a></td>
+                            <td class="text-right"><a class="tx_button" href="javascript:;">提现</a> | <a class="xj_button" href="javascript:;">续借</a> | <a href="#">详情</a> | <a href="#">审核</a> | <a href="#">回款</a></td>
                         </tr>
                         <tr>
                             <td>2016/03/30</td>
                             <td>王尼玛</td>
-                            <td>8888888</td>
+                            <td>信用卡</td>
+                            <td>8,888,888</td>
                             <td>2016/05/01</td>
                             <td>88</td>
                             <td>已完成</td>
-                            <td class="text-right"><a href="#">详情</a> | <a href="#">审核</a> | <a href="#">回款</a></td>
+                            <td class="text-right"><a class="tx_button" href="javascript:;">提现</a> | <a href="#">详情</a> | <a href="#">审核</a> | <a href="#">回款</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -174,6 +177,65 @@
             </div>
         </div>
         <!--END 汇款列表-->
+        <!--提现弹窗-->
+        <script type="text/javascript" src="layer/layer.js"></script>
+        <script type="text/javascript">
+            $(".tx_button").bind("click",function(){
+                layer.confirm('您确定要提前提现吗？那将会扣除一定利息！', {
+                    btn: ['是的','再考虑一下'] //按钮
+                }, function(){
+                    layer.msg('提现申请已发送成功', {icon: 1});
+                }, function(){
+                    layer.close();
+                });
+            });
+        </script>
+        <!--END 提现弹窗-->
+        <!-- 续借弹窗 -->
+        <div id="xj_form" class="hide">
+            <div class="box">
+                <div class="box_t">
+                    <h3>续借</h3>
+                </div>
+                <div class="box_c">
+                    <fieldset>
+                        <div class="box_c_item">
+                            <label class="l_title">回款日期：</label>
+                            <input class="text_input w300" type="text" placeholder="请选择续借后新的回款日期" onClick="laydate({istime: false, format: 'YYYY-MM-DD',issure: false})">
+                            <div class="clear"></div>
+                            <!-- 日历控件 -->
+                            <script type="text/javascript" src="laydate/laydate.js"></script>
+                            <script>
+                                !function(){
+                                    laydate.skin('yalan');//切换皮肤，请查看skins下面皮肤库
+                                }();
+                            </script>
+                            <!-- END 日历控件 -->
+                        </div>
+                        <div class="box_c_item">
+                            <label class="l_title"></label>
+                            <button class="btn btn_commit" type="button">提交</button> &nbsp;<a href="javascript:;" class="btn btn_cancel">取消</a>
+                            <div class="clear"></div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="layer/layer.js"></script>
+        <script type="text/javascript">
+            $(".xj_button").bind("click",function(){
+                layer.open({
+                    type: 1,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['480px', '300px'], //宽高
+                    title: false,
+                    closeBtn: 1,
+                    shadeClose: true,
+                    content: $("#xj_form")
+                });
+            });
+        </script>
+        <!--END 续借弹窗-->
 
     </div>
     <!--END content-->
